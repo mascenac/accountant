@@ -8,8 +8,25 @@ function startElapsedTimeCounter(startDate) {
         const minutes = Math.floor((timePassed % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timePassed % (1000 * 60)) / 1000);
 
-        // Exibe o tempo passado
-        document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        // Atualiza o contador no formato de relógio
+        document.getElementById("countdown").innerHTML = `
+            <div class="countdown-item">
+                <span>${days}</span>
+                <small>Dias</small>
+            </div>
+            <div class="countdown-item">
+                <span>${hours}</span>
+                <small>Horas</small>
+            </div>
+            <div class="countdown-item">
+                <span>${minutes}</span>
+                <small>Minutos</small>
+            </div>
+            <div class="countdown-item">
+                <span>${seconds}</span>
+                <small>Segundos</small>
+            </div>
+        `;
     }
 
     updateCounter();
