@@ -1,3 +1,4 @@
+/* Estilos gerais */
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
@@ -21,92 +22,51 @@ h1 {
 #countdown {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espaçamento entre os itens do contador */
+    gap: 10px; /* Espaçamento menor entre os itens */
     margin: 20px 0;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
 }
 
 .countdown-item {
     background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente branco */
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    width: 100px;
+    width: 80px; /* Largura menor para telas pequenas */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
     text-align: center;
 }
 
 .countdown-item span {
     display: block;
-    font-size: 2em;
+    font-size: 1.5em; /* Fonte menor para telas pequenas */
     font-weight: bold;
 }
 
 .countdown-item small {
-    font-size: 0.8em;
+    font-size: 0.7em; /* Fonte menor para telas pequenas */
     color: rgba(0, 0, 0, 0.7); /* Texto mais escuro */
 }
 
-.phone-frame {
-    width: 300px;
-    height: 600px;
-    margin: 20px auto;
-    background-color: #000;
-    border-radius: 30px;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
-    position: relative;
-}
+/* Estilos para telas menores (celulares) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Título menor para telas pequenas */
+    }
 
-.stories-container {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-}
+    #countdown {
+        gap: 5px; /* Espaçamento ainda menor */
+    }
 
-.phone-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    .countdown-item {
+        width: 70px; /* Largura ainda menor */
+        padding: 10px;
+    }
 
-.stories-buttons {
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+    .countdown-item span {
+        font-size: 1.2em; /* Fonte menor */
+    }
 
-.button {
-    width: 3px;
-    height: 40px;
-    background-color: #fff;
-    border-radius: 2px;
-    transition: background-color 0.3s ease; /* Efeito de transição */
-}
-
-.button:hover {
-    background-color: #a1c4fd; /* Mudança de cor ao passar o mouse */
-}
-
-.button.power {
-    height: 20px;
-}
-
-.button.volume-up {
-    height: 30px;
-}
-
-.button.volume-down {
-    height: 30px;
-}
-
-.spotify {
-    margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente branco */
-    padding: 10px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    .countdown-item small {
+        font-size: 0.6em; /* Fonte menor */
+    }
 }
