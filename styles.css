@@ -20,52 +20,52 @@ h1 {
 }
 
 #countdown {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas pequenas */
-    gap: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 5vw; /* Espaçamento relativo ao tamanho da tela */
+    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
     margin: 20px 0;
-    max-width: 300px; /* Limita a largura máxima */
 }
 
 .countdown-item {
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
+    padding: 5vw; /* Ajuste proporcional */
     border-radius: 10px;
-    text-align: center;
+    width: 20vw; /* Largura relativa à tela */
+    min-width: 80px; /* Tamanho mínimo para evitar deformações */
+    max-width: 100px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .countdown-item span {
     display: block;
-    font-size: 1.2em;
+    font-size: 5vw; /* Tamanho do texto ajustável */
     font-weight: bold;
 }
 
 .countdown-item small {
-    font-size: 0.6em;
+    font-size: 2.5vw;
     color: rgba(0, 0, 0, 0.7);
 }
 
-/* Estilos para telas menores (celulares) */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2em; /* Título menor para telas pequenas */
-    }
-
+/* MEDIA QUERY PARA TELAS MENORES */
+@media (max-width: 480px) {
     #countdown {
-        gap: 5px; /* Espaçamento ainda menor */
+        gap: 3vw; /* Reduz o espaçamento */
     }
 
     .countdown-item {
-        width: 70px; /* Largura ainda menor */
-        padding: 10px;
+        width: 22vw;
+        padding: 4vw;
+        min-width: 60px;
     }
 
     .countdown-item span {
-        font-size: 1.2em; /* Fonte menor */
+        font-size: 6vw; /* Maior legibilidade em telas pequenas */
     }
 
     .countdown-item small {
-        font-size: 0.6em; /* Fonte menor */
+        font-size: 3vw;
     }
 }
