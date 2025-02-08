@@ -20,30 +20,31 @@ h1 {
 }
 
 #countdown {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas pequenas */
-    gap: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaçamento menor entre os itens */
     margin: 20px 0;
-    max-width: 300px; /* Limita a largura máxima */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
 }
 
 .countdown-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente branco */
+    padding: 15px;
     border-radius: 10px;
+    width: 80px; /* Largura menor para telas pequenas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .countdown-item span {
     display: block;
-    font-size: 1.2em;
+    font-size: 1.5em; /* Fonte menor para telas pequenas */
     font-weight: bold;
 }
 
 .countdown-item small {
-    font-size: 0.6em;
-    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.7em; /* Fonte menor para telas pequenas */
+    color: rgba(0, 0, 0, 0.7); /* Texto mais escuro */
 }
 
 /* Estilos para telas menores (celulares) */
