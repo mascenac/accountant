@@ -69,3 +69,69 @@ h1 {
         font-size: 3vw;
     }
 }
+
+.phone-frame {
+    width: 300px;
+    height: 600px;
+    margin: 20px auto;
+    background-color: #000;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    position: relative;
+}
+
+.stories-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.phone-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.stories-buttons {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button {
+    width: 3px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: background-color 0.3s ease; /* Efeito de transição */
+}
+
+.button:hover {
+    background-color: #a1c4fd; /* Mudança de cor ao passar o mouse */
+}
+
+.button.power {
+    height: 20px;
+}
+
+.button.volume-up {
+    height: 30px;
+}
+
+.button.volume-down {
+    height: 30px;
+}
+
+.spotify {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente branco */
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
