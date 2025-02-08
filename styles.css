@@ -105,11 +105,21 @@ h1 {
 }
 
 .spotify {
-    margin-top: 10px; /* Reduzir a margem */
+    margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 5px; /* Reduzir o padding */
-    border-radius: 8px; /* Reduzir o raio da borda */
+    padding: 10px;
+    border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Ocupar 90% da largura do container */
+    max-width: 300px; /* Limitar a largura máxima */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spotify iframe {
+    width: 100%; /* Ocupar 100% da largura do container .spotify */
+    height: 80px; /* Altura fixa */
+    border-radius: 12px;
 }
 
 /* Media Queries para telas menores */
@@ -136,8 +146,12 @@ h1 {
         height: 300px; /* Reduzir a altura */
     }
 
+    .spotify {
+        width: 100%; /* Ocupar 100% da largura em telas pequenas */
+        padding: 5px; /* Reduzir o padding */
+    }
+
     .spotify iframe {
-        width: 250px; /* Reduzir a largura do iframe do Spotify */
-        height: 60px; /* Reduzir a altura do iframe do Spotify */
+        height: 60px; /* Reduzir a altura em telas pequenas */
     }
 }
