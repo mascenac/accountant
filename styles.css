@@ -1,31 +1,58 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    background: #e0f7fa; /* Azul claro sólido */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333; /* Texto escuro para contrastar com o fundo claro */
 }
 
 h1 {
-    margin-top: 20px;
     font-size: 2.5em;
-    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Sombra clara no texto */
 }
 
 #countdown {
-    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os itens do contador */
     margin: 20px 0;
-    color: #333;
+}
+
+.countdown-item {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente branco */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.countdown-item small {
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.7); /* Texto mais escuro */
 }
 
 .phone-frame {
     width: 300px;
     height: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
     background-color: #000;
     border-radius: 30px;
     padding: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
     position: relative;
 }
 
@@ -57,6 +84,11 @@ h1 {
     height: 40px;
     background-color: #fff;
     border-radius: 2px;
+    transition: background-color 0.3s ease; /* Efeito de transição */
+}
+
+.button:hover {
+    background-color: #a1c4fd; /* Mudança de cor ao passar o mouse */
 }
 
 .button.power {
@@ -73,4 +105,8 @@ h1 {
 
 .spotify {
     margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente branco */
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
