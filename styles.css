@@ -1,65 +1,66 @@
+/* Estilos gerais */
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
-    background: #e0f7fa; /* Azul claro sólido */
+    background: #e0f7fa;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #333; /* Texto escuro para contrastar com o fundo claro */
+    color: #333;
 }
 
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Sombra clara no texto */
+    font-size: 2em; /* Reduzir o tamanho da fonte */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
 
 #countdown {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espaçamento entre os itens do contador */
-    margin: 20px 0;
+    gap: 10px; /* Reduzir o espaçamento entre os itens */
+    margin: 10px 0;
 }
 
 .countdown-item {
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente branco */
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px; /* Reduzir o padding */
     border-radius: 10px;
-    width: 100px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 80px; /* Reduzir a largura */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .countdown-item span {
     display: block;
-    font-size: 2em;
+    font-size: 1.5em; /* Reduzir o tamanho da fonte */
     font-weight: bold;
 }
 
 .countdown-item small {
-    font-size: 0.8em;
-    color: rgba(0, 0, 0, 0.7); /* Texto mais escuro */
+    font-size: 0.7em; /* Reduzir o tamanho da fonte */
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .phone-frame {
-    width: 300px;
-    height: 600px;
-    margin: 20px auto;
+    width: 200px; /* Reduzir a largura */
+    height: 400px; /* Reduzir a altura */
+    margin: 10px auto;
     background-color: #000;
-    border-radius: 30px;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    border-radius: 20px; /* Reduzir o raio da borda */
+    padding: 10px; /* Reduzir o padding */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     position: relative;
 }
 
 .stories-container {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 15px; /* Reduzir o raio da borda */
     overflow: hidden;
     position: relative;
 }
@@ -72,41 +73,71 @@ h1 {
 
 .stories-buttons {
     position: absolute;
-    top: 20px;
-    right: 10px;
+    top: 10px; /* Ajustar a posição */
+    right: 5px; /* Ajustar a posição */
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px; /* Reduzir o espaçamento */
 }
 
 .button {
-    width: 3px;
-    height: 40px;
+    width: 2px; /* Reduzir a largura */
+    height: 20px; /* Reduzir a altura */
     background-color: #fff;
-    border-radius: 2px;
-    transition: background-color 0.3s ease; /* Efeito de transição */
+    border-radius: 1px; /* Reduzir o raio da borda */
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: #a1c4fd; /* Mudança de cor ao passar o mouse */
+    background-color: #a1c4fd;
 }
 
 .button.power {
-    height: 20px;
+    height: 15px; /* Reduzir a altura */
 }
 
 .button.volume-up {
-    height: 30px;
+    height: 20px; /* Reduzir a altura */
 }
 
 .button.volume-down {
-    height: 30px;
+    height: 20px; /* Reduzir a altura */
 }
 
 .spotify {
-    margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente branco */
-    padding: 10px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 10px; /* Reduzir a margem */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px; /* Reduzir o padding */
+    border-radius: 8px; /* Reduzir o raio da borda */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em; /* Reduzir ainda mais o tamanho da fonte */
+    }
+
+    .countdown-item {
+        width: 60px; /* Reduzir a largura */
+        padding: 5px; /* Reduzir o padding */
+    }
+
+    .countdown-item span {
+        font-size: 1.2em; /* Reduzir o tamanho da fonte */
+    }
+
+    .countdown-item small {
+        font-size: 0.6em; /* Reduzir o tamanho da fonte */
+    }
+
+    .phone-frame {
+        width: 150px; /* Reduzir a largura */
+        height: 300px; /* Reduzir a altura */
+    }
+
+    .spotify iframe {
+        width: 250px; /* Reduzir a largura do iframe do Spotify */
+        height: 60px; /* Reduzir a altura do iframe do Spotify */
+    }
 }
