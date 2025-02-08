@@ -1,92 +1,78 @@
-/* Estilos gerais */
+/* Reset de estilos e configurações globais */
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
-    background: #e0f7fa; /* Azul claro sólido */
+    background: linear-gradient(135deg, #89f7fe, #66a6ff); /* Gradiente azul */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #333; /* Texto escuro para contrastar com o fundo claro */
+    color: #fff;
 }
 
+/* Título principal */
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Sombra clara no texto */
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilo do container do contador */
 #countdown {
     display: flex;
     justify-content: center;
-    gap: 5vw; /* Espaçamento relativo ao tamanho da tela */
-    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+    gap: 15px;
+    flex-wrap: wrap;
     margin: 20px 0;
+    padding: 10px;
 }
 
+/* Estilo dos itens do contador */
 .countdown-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 5vw; /* Ajuste proporcional */
-    border-radius: 10px;
-    width: 20vw; /* Largura relativa à tela */
-    min-width: 80px; /* Tamanho mínimo para evitar deformações */
-    max-width: 100px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 12px;
+    width: 90px;
+    min-width: 80px;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
 }
 
 .countdown-item span {
     display: block;
-    font-size: 5vw; /* Tamanho do texto ajustável */
+    font-size: 2em;
     font-weight: bold;
 }
 
 .countdown-item small {
-    font-size: 2.5vw;
-    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.9em;
+    opacity: 0.8;
 }
 
-/* MEDIA QUERY PARA TELAS MENORES */
-@media (max-width: 480px) {
-    #countdown {
-        gap: 3vw; /* Reduz o espaçamento */
-    }
-
-    .countdown-item {
-        width: 22vw;
-        padding: 4vw;
-        min-width: 60px;
-    }
-
-    .countdown-item span {
-        font-size: 6vw; /* Maior legibilidade em telas pequenas */
-    }
-
-    .countdown-item small {
-        font-size: 3vw;
-    }
-}
-
+/* Container para a simulação do telefone */
 .phone-frame {
-    width: 300px;
-    height: 600px;
+    width: 280px;
+    height: 560px;
+    background-color: #222;
+    border-radius: 25px;
+    padding: 15px;
     margin: 20px auto;
-    background-color: #000;
-    border-radius: 30px;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     position: relative;
 }
 
+/* Estilizando a tela do telefone */
 .stories-container {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 15px;
     overflow: hidden;
     position: relative;
+    background: #000;
 }
 
 .phone-image {
@@ -95,43 +81,72 @@ h1 {
     object-fit: cover;
 }
 
+/* Botões laterais do telefone */
 .stories-buttons {
     position: absolute;
-    top: 20px;
-    right: 10px;
+    top: 15px;
+    right: 8px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 .button {
-    width: 3px;
-    height: 40px;
-    background-color: #fff;
+    width: 4px;
+    height: 35px;
+    background-color: #ddd;
     border-radius: 2px;
-    transition: background-color 0.3s ease; /* Efeito de transição */
+    transition: background 0.3s ease;
 }
 
 .button:hover {
-    background-color: #a1c4fd; /* Mudança de cor ao passar o mouse */
+    background-color: #66a6ff;
 }
 
 .button.power {
-    height: 20px;
+    height: 18px;
 }
 
-.button.volume-up {
-    height: 30px;
-}
-
+.button.volume-up,
 .button.volume-down {
-    height: 30px;
+    height: 25px;
 }
 
+/* Estilização da seção do Spotify */
 .spotify {
-    margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente branco */
-    padding: 10px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #countdown {
+        gap: 10px;
+    }
+
+    .countdown-item {
+        width: 80px;
+        padding: 12px;
+    }
+
+    .countdown-item span {
+        font-size: 1.8em;
+    }
+
+    .countdown-item small {
+        font-size: 0.8em;
+    }
+
+    .phone-frame {
+        width: 240px;
+        height: 500px;
+    }
 }
